@@ -78,7 +78,8 @@ footer .btn-outline-light {
 .letreros {
     text-align: center;
     font-family: "Jaini Purva", system-ui;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 200%;
     font-style: normal;
     color: #fafafa;
 }
@@ -87,9 +88,9 @@ footer .btn-outline-light {
 }
 #nosotros{
     /*border: solid #333333 50px;*/
-    margin-top: 10%;
+    margin-top: 5%;
 }
 #rereserva{
     /*border: solid #333333 50px;*/
-    margin-top: 10%;
+    margin-top: 5%;
 }
