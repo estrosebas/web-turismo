@@ -7,7 +7,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
     <!--Fuentes para las secciones-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +14,7 @@
 </head>
 <body>
     <header class="bg-dark text-white fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-dark ">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">Turismo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,12 +39,10 @@
             <h4 class="letreros">Encantadora ciudad blanca</h4>
             <a href="#sobre-nosotros" class="scroll-down"></a>
         </div>
-        
     </section>
 
-    <section id="sobre-nosotros" class="carousel-container text-center my-5">
+    <section id="sobre-nosotros" class="carousel-container text-center ">
         <h2 class="letreros">Solo en Arequipa</h2>
-        
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -54,7 +51,6 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
             </ol>
-            
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="https://gondolatours.pe/wp-content/uploads/2018/12/2-Sillar.jpg" class="d-block w-75 mx-auto" alt="Imagen 1">
@@ -85,14 +81,19 @@
             </a>
         </div>
     </section>
-
+<!-- 
+w-90: Establece el ancho de la imagen al 90%.
+pt-3: Añade un padding-top de 1rem a la imagen.
+mx-auto: Añade márgenes automáticos a los lados de la imagen para centrarla horizontalmente.
+d-block: Hace que la imagen se comporte como un elemento en bloque, lo cual es necesario para que los márgenes automáticos funcionen correctamente.
+-->
     <section id="reservas" class="reservations text-center my-5">
         <div class="container">
             <h2 class="letreros">Reservaciones</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="reserva1.jpg" class="card-img-top" alt="Reserva 1">
+                    <div class="card ">
+                        <img src="https://gondolatours.pe/wp-content/uploads/2018/12/2-Sillar.jpg" class="card-img-top w-90 pt-3 mx-auto d-block" alt="Reserva 1">
                         <div class="card-body">
                             <button class="btn btn-primary">Reserva número 1</button>
                         </div>
@@ -100,7 +101,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="reserva2.jpg" class="card-img-top" alt="Reserva 2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Iglesia_de_Characato_01.png" class="card-img-top w-90 pt-3 mx-auto d-block" alt="Reserva 2">
                         <div class="card-body">
                             <button class="btn btn-primary">Reserva número 2</button>
                         </div>
@@ -108,9 +109,19 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="reserva3.jpg" class="card-img-top" alt="Reserva 3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Volcano_Misti%2C_Peru.jpg" class="card-img-top w-90 pt-3 mx-auto d-block" alt="Reserva 3">
                         <div class="card-body">
                             <button class="btn btn-primary">Reserva número 3</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="cuadro-de-imagen">
+                        <img src="https://www.peru.travel/contenido/destino/imagen/es/3/1.2/principal/plaza%20de%20armas%20arequipa.jpg" class="card-img-top w-90 pt-3" alt="Reserva 4">
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-primary">Reserva número 4</button>
                         </div>
                     </div>
                 </div>
@@ -170,6 +181,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-    
 </body>
 </html>
