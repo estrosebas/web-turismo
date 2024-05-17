@@ -85,9 +85,11 @@ footer .btn-outline-light {
 .w-90{
     width: 90%;
 }
-#sobre-nosotros{
-    border: solid #333333 50px;
+#nosotros{
+    /*border: solid #333333 50px;*/
+    margin-top: 10%;
 }
-#reservas{
-    border: solid #333333 50px;
+#rereserva{
+    /*border: solid #333333 50px;*/
+    margin-top: 10%;
 }
