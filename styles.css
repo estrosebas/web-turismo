@@ -14,8 +14,29 @@ body, html {
     background-color: #555;
 }
 
-#inicio h1 {
+.letreros-titulo{
     font-size: 72px;
+    text-align: center;
+    font-family: "Jaini Purva", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    color: #fafafa;
+}
+.letreros-descripcion{
+    font-size: 200%;
+    text-align: center;
+    font-family: "Jaini Purva", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    color: #fafafa;
+}
+.letreros {
+    text-align: center;
+    font-family: "Jaini Purva", system-ui;
+    font-weight: 500;
+    font-size: 200%;
+    font-style: normal;
+    color: #fafafa;
 }
 .seleccionado {
     padding-top: 5px;
@@ -41,6 +62,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 56px;
 }
 
 .parallax-content {
@@ -52,7 +74,11 @@ body, html {
 }
 
 .carousel-container {
-    padding: 10px 0;
+    padding-top: 56px;
+}
+.reservations{
+    padding-top: 56px;
+    
 }
 
 .carousel-item img {
@@ -65,7 +91,9 @@ body, html {
 .carousel-item img:hover {
     transform: scale(1.05);
 }
-
+.card:hover{
+    transform: scale(1.05);
+}
 footer .form-control,
 footer .btn-primary {
     margin: 5px 0;
@@ -75,22 +103,44 @@ footer .btn-outline-light {
     margin: 5px;
 }
 
-.letreros {
-    text-align: center;
-    font-family: "Jaini Purva", system-ui;
-    font-weight: 500;
-    font-size: 200%;
-    font-style: normal;
-    color: #fafafa;
-}
+
 .w-90{
     width: 90%;
 }
-#nosotros{
-    /*border: solid #333333 50px;*/
-    margin-top: 5%;
+
+
+
+
+
+.selector-color {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
 }
-#rereserva{
-    /*border: solid #333333 50px;*/
-    margin-top: 5%;
+
+.btn-color {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border: 1px white solid;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#btn-sol {
+    background-color: #333333; /* Amarillo */
+}
+
+#btn-nube {
+    background-color: #2C3E50; /* Azul */
+}
+
+#btn-luna {
+    background-color: #9B59B6; /* Morado */
+}
+#seleccion{
+    background-color: #333334;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #87CEEB ; 
 }
