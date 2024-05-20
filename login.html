@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Perú</title>
+    <link rel="stylesheet" href="style-login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="wrapper" id="loginForm">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Usuario" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Contraseña" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Recordarmelo</label>
+                <a href="#">Olvide mi contraseña</a>
+            </div>
+            <button type="submit" class="btn">Ingresar</button>
+            <div class="register-link">
+                <p>¿Aun no tienes una cuenta? <a href="#" onclick="showRegisterForm()">Regístrate</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="wrapper" id="registerForm" style="display: none;">
+        <form action="">
+            <h1>Registro</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Nombre" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Correo Electrónico" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Contraseña" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="submit" class="btn">Registrar</button>
+            <div class="register-link">
+                <p>¿Ya tienes una cuenta? <a href="#" onclick="showLoginForm()">Inicia Sesión</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showRegisterForm() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'block';
+        }
+
+        function showLoginForm() {
+            document.getElementById('registerForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>
+<!--Hecho por -->

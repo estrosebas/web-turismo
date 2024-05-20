@@ -28,3 +28,16 @@ document.getElementById('btn-luna').addEventListener('click', function() {
         letrero.style.color = "#333333"; // Morado
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var loginButton = document.getElementById("loginButton");
+    loginButton.addEventListener("click", function() {
+        window.location.href = "login.html";
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    var loginButton = document.getElementById("registerButton");
+    loginButton.addEventListener("click", function() {
+        window.location.href = "register.html";
+    });
+});

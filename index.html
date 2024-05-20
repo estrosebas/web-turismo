@@ -38,8 +38,8 @@
                     <li class="nav-item"><a class="nav-link" href="#lugares" onclick="seleccionar(this)">Lugares</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto" onclick="seleccionar(this)">Contáctanos</a></li>
                 </ul>
-                <button class="btn btn-secondary mr-2">Registrarse</button>
-                <button class="btn btn-secondary">Ingresar</button>
+                <button class="btn btn-secondary mr-2" id="registerButton">Registrarse</button>
+                <button class="btn btn-secondary" id="loginButton">Ingresar</button>
             </div>
         </nav>
     </header>
@@ -48,8 +48,9 @@
         <div class="parallax-content">
             <h1 class="letreros-titulo">Arequipa</h1>
             <h4 class="letreros-descripcion">Encantadora ciudad blanca</h4>
-            <a href="#sobre-nosotros" class="scroll-down"></a>
+            
         </div>
+        <a href="#sobre-nosotros" class="scroll-down"></a>
     </section>
 
     <section id="sobre-nosotros" class="carousel-container text-center">
@@ -187,7 +188,34 @@ d-block: Hace que la imagen se comporte como un elemento en bloque, lo cual es n
             </div>
         </div>
     </footer>
-    
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputEmail">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Correo Electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Contraseña</label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p>¿No tienes una cuenta? <a href="#">Regístrate aquí</a></p>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
