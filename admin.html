@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administración de Pagos</title>
+  <title>Administración</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles-admin.css">
   <script src="https://kit.fontawesome.com/1ce12f88b7.js" crossorigin="anonymous"></script>
@@ -65,7 +65,7 @@
     <div id="content" class="flex-grow-1">
       <div id="bienvenida" class="bienvenida">
         <h1><i class="fas fa-star"></i> Bienvenido <i class="fas fa-star"></i></h1>
-        <p>¡Gracias por visitar nuestra página de administración de pagos!</p>
+        <p>¡Gracias por visitar nuestra página de administración de turismo!</p>
       </div>
       <!--lugares-->
       <div id="lugares-registrar" class="section" style="display: none;">
@@ -100,7 +100,7 @@
             <input type="text" id="buscar-lugar" class="form-control">
             <button type="button" class="btn btn-primary" onclick="buscarLugar()">Buscar</button>
         </div>
-        <form id="formulario-modificar" style="display: none;">
+        <form id="formulario-modificar-lugar" style="display: none;">
             <div class="form-group">
                 <label for="lugar">Lugar:</label>
                 <input type="text" id="lugar" name="lugar" class="form-control" required>
@@ -199,7 +199,7 @@
             <input type="text" id="buscar-cliente" class="form-control">
             <button type="button" class="btn btn-primary" onclick="buscarCliente()">Buscar</button>
         </div>
-        <form id="formulario-modificar" style="display: none;">
+        <form id="formulario-modificar-cliente" style="display: none;">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" class="form-control" required>

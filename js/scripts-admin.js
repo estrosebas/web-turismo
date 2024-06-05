@@ -14,5 +14,9 @@ function showSection(sectionId) {
 
 function buscarLugar() {
     var nombreLugar = document.getElementById('buscar-lugar').value;
-    document.getElementById('formulario-modificar').style.display = 'block';
+    document.getElementById('formulario-modificar-lugar').style.display = 'block';
+}
+function buscarCliente() {
+    var nombreCliente = document.getElementById('buscar-cliente').value;
+    document.getElementById = document.getElementById('formulario-modificar-cliente').style.display = 'block';
 }

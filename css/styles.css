@@ -150,17 +150,4 @@ footer .btn-outline-light {
     text-align: center;
     border: 1px solid #87CEEB ; 
 }
-#login{
-    background-image: url('arequipa.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 56px;
-}
-#password:hover,#email:hover,#button-login:hover{
-    transform: scale(1.05);
-}
+

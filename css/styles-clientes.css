@@ -1,0 +1,39 @@
+body {
+    background-image: url('../imagenes/uff.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.card-body {
+    overflow: hidden; /* Oculta el texto que excede el límite del card */
+    max-height: 60px; /* Establece una altura máxima para el card */
+    transition: max-height 1.0s ease; /* Agrega una transición suave al expandir/cerrar el card */
+}
+
+.card:hover .card-body {
+    max-height: 300px; /* Muestra el texto completo cuando el usuario pasa el mouse sobre el card */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse sobre los cards */
+}
+
+.card-img-top {
+    height: 200px; /* Ajusta esta altura según tus preferencias */
+    object-fit: cover; /* Esto asegura que la imagen se ajuste correctamente dentro del contenedor */
+}
+.letreros {
+    text-align: center;
+    font-family: "Jaini Purva", system-ui;
+    font-weight: 500;
+    font-size: 200%;
+    font-style: normal;
+    color: #fafafa;
+    padding: 2%;
+}
