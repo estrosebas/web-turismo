@@ -1,0 +1,54 @@
+#sidebar {
+  min-height: 100vh;
+  background: #343a40;
+  color: white;
+  width: 110px;
+  transition: width 0.7s;
+}
+
+#sidebar:hover {
+  width: 250px;
+}
+
+#sidebar .nav-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  white-space: nowrap; 
+}
+
+#sidebar .nav-link .link-text {
+  margin-left: 10px;
+  display: none;
+}
+
+#sidebar:hover .nav-link .link-text {
+  display: inline;
+}
+
+#content {
+  margin-left: 10px;
+  padding: 20px;
+  transition: margin-left 0.7s;
+}
+
+#sidebar:hover + #content {
+  margin-left: 25px;
+}
+.bienvenida {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.bienvenida h1 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.bienvenida p {
+  color: #6c757d;
+}

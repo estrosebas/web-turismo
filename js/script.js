@@ -35,9 +35,3 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "login.html";
     });
 });
-document.addEventListener("DOMContentLoaded", function() {
-    var loginButton = document.getElementById("registerButton");
-    loginButton.addEventListener("click", function() {
-        window.location.href = "register.html";
-    });
-});

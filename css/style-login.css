@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(./imagenes/uff.jpg);
+    background: url(../imagenes/uff.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -123,4 +123,8 @@ body {
 
 .register-link p a:hover {
     text-decoration: underline;
+}
+.ejemplo-logins .btn {
+    width: auto;
+    padding: 10px 40px;
 }
