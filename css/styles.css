@@ -10,10 +10,34 @@ body, html {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
 }
+.navbar-nav .nav-link {
+    position: relative; /* Necesario para la animación */
+    padding-bottom: 10px; /* Espacio para el borde inferior */
+    border-bottom: 3px solid transparent; /* Borde inferior inicial transparente */
+    transition: border-bottom-color 0.3s ease; /* Transición para suavizar el cambio */
+}
+
+.navbar-nav .nav-link::after {
+    content: ''; /* Crea un pseudo-elemento para la animación */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Parte central del enlace */
+    width: 0;
+    height: 3px; /* Grosor del borde inferior */
+    background-color: #ffffff; /* Color del borde inferior */
+    transition: width 0.3s ease, left 0.3s ease; /* Transiciones para la animación */
+}
+
+.navbar-nav .nav-link.seleccionado::after {
+    width: calc(100% - 40px); /* Ancho completo menos los márgenes de los enlaces */
+    left: 20px; /* Alineación a la izquierda después de la animación */
+}
+
 
 .btn-secondary:hover {
     background-color: #555;
 }
+
 
 .letreros-titulo{
     font-size: 72px;
@@ -39,9 +63,7 @@ body, html {
     font-style: normal;
     color: #fafafa;
 }
-.seleccionado {
-    padding-top: 5px;
-}
+
 .scroll-down {
     position: absolute;
     bottom: 20px;
@@ -116,12 +138,19 @@ footer .btn-outline-light {
 
 
 
+#seleccion {
+    background-color: #333334;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #87CEEB;
+    width: 40px; /* Tamaño inicial del contenedor, igual al tamaño de un botón */
+    overflow: hidden;
+    transition: width 0.3s ease; /* Transición para la expansión */
+    position: relative;
+}
 
-
-.selector-color {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
+#seleccion:hover {
+    width: 120px; /* Tamaño expandido del contenedor para mostrar los tres botones */
 }
 
 .btn-color {
@@ -131,25 +160,52 @@ footer .btn-outline-light {
     border: 1px white solid;
     border-radius: 50%;
     cursor: pointer;
+    opacity: 0; /* Inicialmente invisibles */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición para la visibilidad y el movimiento */
+    transform: translateX(-100%); /* Desplazamiento inicial fuera del contenedor */
+}
+
+#seleccion .seleccionado {
+    opacity: 1; /* El botón seleccionado es visible */
+    transform: translateX(0); /* El botón seleccionado no se desplaza */
+    position: absolute; /* Asegura que el botón seleccionado no se mueva */
+    top: 50%; /* Centra verticalmente */
+    left: 5px; /* Ajusta horizontalmente */
+    transform: translateY(-50%); /* Alineación precisa */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#seleccion:hover .btn-color {
+    opacity: 1; /* Visibles al pasar el mouse */
+    transform: translateX(0); /* Desplazamiento a su posición original */
+    position: static; /* Resetea la posición de los botones no seleccionados */
 }
 
 #btn-sol {
-    background-color: #333333; /* Amarillo */
+    background-color: #333333; /* Color para el botón sol */
 }
 
 #btn-nube {
-    background-color: #2C3E50; /* Azul */
+    background-color: #2C3E50; /* Color para el botón nube */
 }
 
 #btn-luna {
-    background-color: #9B59B6; /* Morado */
+    background-color: #9B59B6; /* Color para el botón luna */
 }
-#seleccion{
-    background-color: #333334;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid #87CEEB ; 
+
+.btn-color img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Asegura que las imágenes también sean redondas */
 }
+
+#seleccion .seleccionado img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 .footer-form input, .footer-form textarea {
             background-color: #333;
@@ -181,5 +237,6 @@ footer .btn-outline-light {
             padding: 0;
             display: inline-flex;
             align-items: center;
-            justify-content: center;}
+            justify-content: center;
+        }
             

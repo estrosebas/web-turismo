@@ -6,6 +6,26 @@ if (enviado === 'true') {
   alert('Formulario enviado correctamente');
 }
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const buttons = document.querySelectorAll('.btn-color');
+    const seleccion = document.getElementById('seleccion');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            buttons.forEach(btn => btn.classList.remove('seleccionado'));
+            button.classList.add('seleccionado');
+        });
+
+        // Mantener el botón seleccionado cuando el contenedor se encoja
+        seleccion.addEventListener('mouseleave', () => {
+            const seleccionado = document.querySelector('.btn-color.seleccionado');
+            if (seleccionado) {
+                seleccionado.classList.add('seleccionado');
+            }
+        });
+    });
+});
+
 function seleccionar(link) {
     var opciones = document.querySelectorAll('#navbarNav .nav-link');
     opciones.forEach(opcion => {
