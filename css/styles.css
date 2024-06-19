@@ -118,8 +118,27 @@ body, html {
     transform: scale(1.05);
 }
 
-#reservas .card:hover {
+
+.card {
+    border: none;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    border: white 1px solid;
+}
+
+.card:hover {
     transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
 }
 
 footer .form-control,

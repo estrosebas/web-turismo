@@ -1,25 +1,27 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // Modal de Reserva
-    $('#reservaModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget); 
-        var title = button.data('title'); 
-        var description = button.data('description');
-        
-        var modal = $(this);
-        modal.find('.modal-title').text(title);
-        modal.find('.modal-body #modalTitle').text(title);
-        modal.find('.modal-body #modalDescription').text(description);
+    $(document).ready(function() {
+        // Evento al hacer clic en "Ver detalles" para cargar datos en el modal
+        $('.ver-detalles').click(function() {
+            var nombre = $(this).data('nombre');
+            var ubicacion = $(this).data('ubicacion');
+            var precio = $(this).data('precio');
+            var descripcion = $(this).data('descripcion');
+            var imagen = $(this).data('imagen');
+
+            // Llenar el modal con los datos obtenidos
+            $('#modalNombre').text(nombre);
+            $('#modalUbicacion').text('Ubicación: ' + ubicacion);
+            $('#modalPrecio').text('Precio: $' + precio);
+            $('#modalDescripcion').text(descripcion);
+            $('#modalImagen').attr('src', imagen);
+        });
     });
 
-    // Modal de Cuenta
-    $('#cuentaModal').on('show.bs.modal', function (event) {
 
-        var accountName = "Sebastián";
-        var accountEmail = "sebastian@example.com";
 
-        var modal = $(this);
-        modal.find('#accountName').text(accountName);
-        modal.find('#accountEmail').text(accountEmail);
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+        window.location.href = 'php/logout.php';
     });
 });
+        

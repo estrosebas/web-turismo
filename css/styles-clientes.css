@@ -1,39 +1,106 @@
+/* Estilos para clientes.php */
+
 body {
     background-image: url('../imagenes/uff.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Arial, sans-serif; /* Fuente global */
 }
 
-.w-90 {
-    width: 90%;
+.fixed-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
 }
 
-.card-body {
-    overflow: hidden; /* Oculta el texto que excede el límite del card */
-    max-height: 60px; /* Establece una altura máxima para el card */
-    transition: max-height 1.0s ease; /* Agrega una transición suave al expandir/cerrar el card */
+.navbar-brand {
+    font-weight: bold;
 }
 
-.card:hover .card-body {
-    max-height: 300px; /* Muestra el texto completo cuando el usuario pasa el mouse sobre el card */
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    color: #fff;
 }
 
+.navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+.card {
+    border: none;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    border: white 1px solid;
+}
 .card:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el mouse sobre los cards */
+    transform: scale(1.05);
 }
 
 .card-img-top {
-    height: 200px; /* Ajusta esta altura según tus preferencias */
-    object-fit: cover; /* Esto asegura que la imagen se ajuste correctamente dentro del contenedor */
+    height: 250px;
+    object-fit: cover;
 }
-.letreros {
-    text-align: center;
-    font-family: "Jaini Purva", system-ui;
-    font-weight: 500;
-    font-size: 200%;
-    font-style: normal;
-    color: #fafafa;
-    padding: 2%;
+
+.card-body {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.modal-body {
+    color: #000;
+}
+
+.modal-content {
+    background-color: #fff;
+}
+
+.modal-footer {
+    background-color: #f2f2f2;
+    border-top: none;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.modal-body p {
+    color: #555;
+}
+
+.modal-header .close {
+    color: #000;
+    opacity: 1;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.w-90{
+    width: 90%;
 }

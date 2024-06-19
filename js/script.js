@@ -69,6 +69,6 @@ document.getElementById('btn-luna').addEventListener('click', function() {
 document.addEventListener("DOMContentLoaded", function() {
     var loginButton = document.getElementById("loginButton");
     loginButton.addEventListener("click", function() {
-        window.location.href = "login.html";
+        window.location.href = "login.php";
     });
 });
