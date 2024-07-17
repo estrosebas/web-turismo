@@ -6,13 +6,14 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: Arial, sans-serif; /* Fuente global */
+    font-family: Arial, sans-serif;
 }
 
+/* Estilos existentes */
 .fixed-top {
     position: sticky;
     top: 0;
-    z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
+    z-index: 1000;
 }
 
 .navbar-brand {
@@ -35,13 +36,13 @@ body {
     color: #fff;
 }
 
-
 .card {
     border: none;
     margin-bottom: 30px;
     transition: transform 0.3s ease;
     border: white 1px solid;
 }
+
 .card:hover {
     transform: scale(1.05);
 }
@@ -101,6 +102,104 @@ body {
     background-color: #5a6268;
 }
 
-.w-90{
+.w-90 {
     width: 90%;
+}
+
+/* Estilos de transición */
+::view-transition-group(root) {
+    animation-timing-function: var(--expo-out);
+}
+
+::view-transition-new(root) {
+    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><filter id="blur"><feGaussianBlur stdDeviation="2"/></filter></defs><circle cx="0" cy="0" r="18" fill="white" filter="url(%23blur)"/></svg>') top left / 0 no-repeat;
+    mask-origin: content-box;
+    animation: scale 1s;
+    transform-origin: top left;
+}
+
+::view-transition-old(root),
+.dark::view-transition-old(root) {
+    animation: scale 1s;
+    transform-origin: top left;
+    z-index: -1;
+}
+
+@keyframes scale {
+    to {
+        mask-size: 350vmax;
+    }
+}
+
+/* Estilos para el modo oscuro */
+body.dark {
+    background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/11/4c/d5/d5/photo0jpg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #e6c8c8;
+}
+
+body.dark .navbar {
+    background-color: #2c0909;
+}
+
+body.dark .navbar-nav .nav-link {
+    color: #e6c8c8;
+}
+
+body.dark .navbar-nav .nav-link:hover {
+    color: #ffa6a6;
+}
+
+body.dark .section-title {
+    color: #ffd1d1;
+}
+
+body.dark .card {
+    background-color: #2b522b;
+}
+
+body.dark .card-body {
+    background-color: #1e3e1e;
+    color: #e6c8c8;
+}
+
+body.dark .btn-primary {
+    background-color: #4a0e0e;
+    border-color: #2c0909;
+}
+
+body.dark .btn-primary:hover {
+    background-color: #6b1414;
+}
+
+body.dark .modal-content {
+    background-color: #1e3e1e;
+    color: #e6c8c8;
+}
+
+body.dark .modal-header,
+body.dark .modal-footer {
+    background-color: #2c0909;
+    border-color: #4a0e0e;
+}
+
+body.dark .modal-title,
+body.dark .modal-body p {
+    color: #e6c8c8;
+}
+
+body.dark .close {
+    color: #e6c8c8;
+}
+
+body.dark .btn-secondary {
+    background-color: #4a0e0e;
+    border-color: #2c0909;
+}
+
+body.dark .btn-secondary:hover {
+    background-color: #6b1414;
 }

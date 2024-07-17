@@ -40,6 +40,9 @@ $resultado = $conn->query($sql);
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
+                        <button onclick="toggleTheme()">Dark</button>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="far fa-calendar-alt"></i> Ofertas
                         </a>
@@ -149,7 +152,19 @@ $resultado = $conn->query($sql);
             </div>
         </div>
     </div>
+    <script>
+    function switchTheme() {
+      document.body.classList.toggle('dark');
+    }
 
+    function toggleTheme() {
+      if (!document.startViewTransition) {
+        switchTheme();
+      } else {
+        document.startViewTransition(switchTheme);
+      }
+    }
+  </script>
     <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
