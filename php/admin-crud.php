@@ -142,7 +142,7 @@ function listarClientes()
             echo '<td>' . htmlspecialchars($row['Nombre']) . '</td>';
             echo '<td>' . htmlspecialchars($row['Correo']) . '</td>';
             echo '<td>' . str_repeat('*', 8) . '</td>'; // No mostrar la contraseña real
-            echo '<td><button class="btn btn-danger eliminar" data-id="' . htmlspecialchars($row['id']) . '">Eliminar</button></td>';
+            echo '<td><button class="btn btn-danger eliminar-cliente" data-id-cliente="' . htmlspecialchars($row['id']) . '">Eliminar</button></td>';
             echo '</tr>';
         }
     } else {
@@ -224,6 +224,35 @@ if (isset($_POST['action']) && $_POST['action'] === 'modificarCliente' && isset(
         echo json_encode(['success' => true]);
     } else {
         echo json_encode(['success' => false]);
+    }
+    exit();
+}
+///eliminar
+function eliminarCliente($id) {
+    global $conn;
+
+    // Preparar y ejecutar la consulta
+    $sql = "DELETE FROM usuarios WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id);
+
+    if ($stmt->execute()) {
+        $stmt->close();
+        return true;
+    } else {
+        $stmt->close();
+        return false;
+    }
+}
+
+// Manejar solicitud de eliminación de cliente
+if (isset($_POST['action']) && $_POST['action'] === 'deleteCliente' && isset($_POST['id'])) {
+    $id = intval($_POST['id']);
+    error_log("ID recibido para eliminar cliente: " . $id);
+    if (eliminarCliente($id)) {
+        echo 'success';
+    } else {
+        echo 'error';
     }
     exit();
 }

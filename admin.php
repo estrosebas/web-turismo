@@ -287,23 +287,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           </tbody>
         </table>
       </div>
-
-      <!--reportes-->
-      <div id="reportes" class="section" style="display: none;">
-        <h2>Generar Reportes</h2>
-        <!-- Formulario para generar reportes -->
-        <form>
-          <div class="form-group">
-            <label for="fecha_inicio">Fecha de Inicio:</label>
-            <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="fecha_fin">Fecha de Fin:</label>
-            <input type="date" id="fecha_fin" name="fecha_fin" class="form-control" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Generar Reporte</button>
-        </form>
-      </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

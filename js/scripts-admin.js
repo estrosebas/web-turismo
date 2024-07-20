@@ -191,3 +191,27 @@ $(document).ready(function() {
     });
   });
 });
+
+////////////////eliminar cliente
+$(document).on('click', '.eliminar-cliente', function () {
+  var id = $(this).data('id-cliente'); // Obtener el ID del atributo data-id-cliente
+  console.log("ID para eliminar cliente: " + id); // Log del ID para depuración
+  if (confirm('¿Estás seguro de que deseas eliminar este cliente?')) {
+      $.ajax({
+          type: 'POST',
+          url: 'php/admin-crud.php',
+          data: { action: 'deleteCliente', id: id },
+          success: function (response) {
+              if (response.trim() === 'success') {
+                  alert('Cliente eliminado exitosamente.');
+                  location.reload(); // Recargar la página para actualizar la lista
+              } else {
+                  alert('Error al eliminar el cliente.');
+              }
+          },
+          error: function () {
+              alert('Ocurrió un error en la solicitud.');
+          }
+      });
+  }
+});
