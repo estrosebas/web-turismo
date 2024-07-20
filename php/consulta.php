@@ -48,4 +48,3 @@ if(isset($_POST['action'])) {
 
 // Cerrar conexión
 $conn->close();
-?>
