@@ -42,7 +42,7 @@ function listar()
 function insertar($idPaquete, $correoUsuario, $fechaInicio, $fechaFin, $comentario)
 {
     global $conn;
-    $estado = 1;
+    $estado = "Pendiente";
     $canceladoPor = null;
     $fechaRegistro = date('Y-m-d H:i:s');
 

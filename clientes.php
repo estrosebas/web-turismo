@@ -171,21 +171,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </button>
                 </div>
                 <div class="modal-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>ID Paquete</th>
-                                <th>Fecha Inicio</th>
-                                <th>Fecha Fin</th>
-                                <th>Comentario</th>
-                                <th>Fecha Registro</th>
-                                <th>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody id="carritoBody">
-                        
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID Paquete</th>
+                                    <th>Fecha Inicio</th>
+                                    <th>Fecha Fin</th>
+                                    <th>Comentario</th>
+                                    <th>Fecha Registro</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="carritoBody">
+                                <!-- Aquí se cargarán las reservas dinámicamente -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
